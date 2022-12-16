@@ -1,5 +1,6 @@
 .section1-text{
     text-align: -webkit-center;
+    align-self: center;
 }
 .section1-text h3{
     font-size: 13px;
