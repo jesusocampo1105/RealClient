@@ -13,7 +13,7 @@ export default function Footer(){
 
             <article className='footer-section1 col-sm'>
                 <p className='text-white'>Redes sociales</p>
-                <div>
+                <div className='footer-images'>
                     <img src={imageTwitter} className="footer-section1-image"/>
                     <img src={imageFacebook} className="footer-section1-image"/>
                     <img src={imageInstagram} className="footer-section1-image"/>

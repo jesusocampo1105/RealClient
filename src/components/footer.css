@@ -23,3 +23,23 @@
     border-radius: 50%;
     width: 80px;
 }
+.footer-images{
+    margin-bottom: 40px;
+}
+.footer-section1 p{
+    font-weight: bold;
+}
+.footer-section2{
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+}
+.footer-sections{
+    height: 364px;
+}
+
+@media (min-width: 640px) {
+    .footer-sections{
+        height: 200px;
+    }
+}
