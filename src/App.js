@@ -1,8 +1,8 @@
+import Layout from './components/Layout/Layout'
+
 function App() {
   return (
-    <div>
-      <h1>Fantasy Sex Shop</h1>
-    </div>
+    <Layout/>
   );
 }
 
