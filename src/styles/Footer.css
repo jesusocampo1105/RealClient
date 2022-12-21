@@ -1,0 +1,42 @@
+.footer {
+    padding: 5rem 0;
+    background: #F2B3D6;
+}
+
+.footer__title {
+    color: #FFFFFF;
+    margin-top: 2rem;
+}
+
+.logo__text {
+    font-size: 1.4rem;
+    max-width: 80%;
+    text-align: justify;
+}
+
+.opening__time-item{
+    background-color: transparent !important;
+}
+
+.opening__time-item span {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #161616;
+}
+
+.opening__time-item p {
+    color: #161616;
+    font-size: 1.4rem;
+}
+
+.copyright {
+    padding: 2rem 0;
+    background: #F291BF;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+}
+
+.logo-wirkisoft {
+    cursor: pointer;
+}

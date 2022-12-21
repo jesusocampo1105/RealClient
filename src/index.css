@@ -35,3 +35,10 @@ h2 {
   font-weight: 700;
   color: #a6032f;
 }
+
+h3,
+h4,
+h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}

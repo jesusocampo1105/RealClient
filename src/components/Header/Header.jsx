@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
-import { Container } from "reactstrap";
-import Logo from "../../assets/img/Logo.svg";
 import { NavLink, Link } from "react-router-dom";
+
+import Logo from "../../assets/img/Logo.svg";
+
+import { Container } from "reactstrap";
 import "../../styles/Header.css";
 
 // Navigation Links
@@ -21,9 +23,11 @@ const nav__links = [
 ];
 
 const Header = () => {
-  const menuRef = useRef(null)
+  // Menu reference
+  const menuRef = useRef(null);
 
-  const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
+  // Show or hide side menu
+  const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
 
   return (
     <header className="header">
@@ -36,6 +40,8 @@ const Header = () => {
           {/* Menu */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5">
+
+              {/* Generate navigation links */}
               {nav__links.map((item, index) => (
                 <NavLink
                   to={item.path}
