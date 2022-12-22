@@ -82,6 +82,35 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      {/* Hero */}
+      <section>
+        <div className="hero__img hero__img-02"></div>
+      </section>
+
+      {/* About us */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h2 className="title mt-5">¿Quiénes Somos?</h2>
+
+              <p className="feature__text">
+                Somos una tienda de productos eróticos, juguetes sexuales y
+                lencería de seducción, con una trayectoría de 3 años en el
+                mercado Bogotano.
+              </p>
+
+              <p className="feature__text">
+                En <span>Fantasy Sex Shop</span> nos hemos caracterizado por el
+                buen trato hacia nuestros clientes, discreción y
+                profesionalismo, además de contar con una atención personalizada
+                respecto a los productos que comercializamos.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   );
 };

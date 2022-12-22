@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
 }
 
+.hero__img-02 {
+  background-image: url(../assets/img/Img-1.jpg);
+}
+
 @media (min-width: 992px) {
   .hero__img {
     height: 50rem;
@@ -23,6 +27,11 @@
 .feature__text {
   font-size: 1.5rem;
   margin: 3rem 0;
+}
+
+.feature__text span {
+  color: #a6032f;
+  font-weight: 500;
 }
 
 .feature__item-icon {
