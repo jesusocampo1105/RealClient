@@ -524,7 +524,7 @@ const products = [
     feature1: "Larga duración",
     feature2: "Multivelocidades",
     feature3: "Silicona",
-    bestSeller: true,
+    bestSeller: false,
   },
 ];
 

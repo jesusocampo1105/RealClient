@@ -1,9 +1,6 @@
 // Import dependencies
 import React from "react";
 
-// Import data products
-import Products from '../assets/data/products'
-
 // Import Styles
 import { Container, Row, Col } from "reactstrap";
 import "../styles/Home.css";
@@ -12,7 +9,6 @@ import "../styles/Home.css";
 import Helmet from "../components/Helmet/Helmet";
 import Category from "../components/UI/Category/Category";
 import Filter from "../components/UI/Filter/Filter";
-import ProductCard from '../components/UI/ProductCard/ProductCard'
 
 // Data
 const featureData = [
@@ -81,15 +77,8 @@ const Home = () => {
               <h2 className="title mt-4">Productos más vendidos</h2>
             </Col>
 
-            {/* Filter product category */}
+            {/* Filter product best seller for category */}
             <Filter />
-
-            {/* Cards with products bestseller */}
-            {Products.map((item) => (
-              <Col lg='3' md='4' key={item.id} className='mt-5 d-flex'>
-                <ProductCard item={item}/>
-              </Col>
-            ))}
           </Row>
         </Container>
       </section>
