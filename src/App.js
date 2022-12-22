@@ -1,12 +1,14 @@
 import './App.css';
 import CounterHooks from './components/CounterHooks';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import { Section1 } from './components/Section1';
-import Section2 from './components/Section2';
-import Section3 from './components/Section3';
-import Section4 from './components/Section4';
-import Section5 from './components/Section5';
+import Footer from './components/footer/Footer';
+
+import Header from './components/header/Header';
+import { Section1 } from './components/section1/Section1';
+import Section2 from './components/section2/Section2';
+import Section3 from './components/section3/Section3';
+import Section4 from './components/section4/Section4';
+import Section5 from './components/section5/Section5';
+
 
 
 function App() {

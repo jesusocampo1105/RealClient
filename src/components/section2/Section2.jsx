@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
-import style from '../components/section2.css'
-import image3 from '../Images/Image3.png'
-import image4 from '../Images/Image4.png'
+import style from '../section2/section2.css'
+import image3 from '../section2/Image3.png'
+import image4 from '../section2/Image4.png'
 
 export default function Section2(){
     return(

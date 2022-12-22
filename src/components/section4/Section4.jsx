@@ -1,4 +1,4 @@
-import style from '../components/section4.css'
+import style from '../section4/section4.css'
 
 export default function Section4(){
     return(

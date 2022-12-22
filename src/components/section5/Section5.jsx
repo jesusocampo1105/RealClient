@@ -1,7 +1,7 @@
-import style from "../components/section5.css";
-import testimony1 from "../Images/testimony1.png";
-import testimony2 from "../Images/testimony2.png";
-import testimony3 from "../Images/testimony3.png";
+import style from "../section5/section5.css";
+import testimony1 from "../section5/testimony1.png";
+import testimony2 from "../section5/testimony2.png";
+import testimony3 from "../section5/testimony3.png";
 
 export default function Section5() {
   return (

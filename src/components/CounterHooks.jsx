@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function CounterHooks(props){
-    const [counter, setcounter] = useState(0);
+    const [counter, setcounter] = useState(1000);
 
     const sumar = () => setcounter(counter + 1);
     const restar = () => setcounter(counter - 1);

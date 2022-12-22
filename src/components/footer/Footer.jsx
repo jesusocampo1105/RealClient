@@ -1,9 +1,9 @@
-import style from '../components/footer.css'
-import imageTwitter from '../Images/Twitter.png'
-import imageFacebook from '../Images/Facebook.png'
-import imageInstagram from '../Images/Instagram.png'
-import imageGitHub from '../Images/GitHub.png'
-import imageLogoBlanco from '../Images/LogoBlanco.png'
+import style from '../footer/footer.css'
+import imageTwitter from '../footer/Twitter.png'
+import imageFacebook from '../footer/Facebook.png'
+import imageInstagram from '../footer/Instagram.png'
+import imageGitHub from '../footer/GitHub.png'
+import imageLogoBlanco from '../footer/LogoBlanco.png'
 
 export default function Footer(){
     return(

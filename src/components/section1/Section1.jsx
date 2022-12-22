@@ -1,5 +1,5 @@
 import style from "./section1.css"
-import image1 from '../Images/Image1.png'
+import image1 from '../section1/Image1.png'
 
 export function Section1(props){
     return(

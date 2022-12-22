@@ -1,6 +1,6 @@
-import ShoppingCar from '../Images/ShoppingCar.png';
-import LogoSinFondo from '../Images/LogoSinFondo.png'
-import style from './header.css';
+import ShoppingCar from './ShoppingCar.png';
+import LogoSinFondo from './LogoSinFondo.png';
+import style from '../header/header.css';
 
 function Header(){
     return(
