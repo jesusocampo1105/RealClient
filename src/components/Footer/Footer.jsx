@@ -1,10 +1,13 @@
+// Import dependencies
 import React from "react";
 
-import Logo from "../../assets/img/Logo.svg";
-import LogoWirkiSoft from "../../assets/img/Logo-WirkiSoft.svg";
-
+// Import Styles
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import "../../styles/Footer.css";
+
+// Import images
+import Logo from "../../assets/img/Logo.svg";
+import LogoWirkiSoft from "../../assets/img/Logo-WirkiSoft.svg";
 
 const Footer = () => {
   return (
@@ -69,7 +72,11 @@ const Footer = () => {
             <p>Todos los derechos reservados.</p>
 
             <div className="logo logo-wirkisoft">
-              <a href="https://wirkisoft.netlify.app/" target="_blank" rel="noreferrer">
+              <a
+                href="https://wirkisoft.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={LogoWirkiSoft} alt="Logo" />
               </a>
             </div>

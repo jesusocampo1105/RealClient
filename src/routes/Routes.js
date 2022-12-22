@@ -1,3 +1,4 @@
+// Import dependencies
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -10,6 +11,7 @@ import Cart from "../pages/Cart";
 const Routers = () => {
   return (
     <Routes>
+      {/* Generate routes for navigation between pages */}
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home />} />
       <Route path="/products" element={<AllProducts />} />

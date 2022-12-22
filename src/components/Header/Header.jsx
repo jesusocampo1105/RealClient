@@ -1,10 +1,13 @@
+// Import dependencies
 import React, { useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 
-import Logo from "../../assets/img/Logo.svg";
-
+// Import Styles
 import { Container } from "reactstrap";
 import "../../styles/Header.css";
+
+// Import images
+import Logo from "../../assets/img/Logo.svg";
 
 // Navigation Links
 const nav__links = [
@@ -40,7 +43,6 @@ const Header = () => {
           {/* Menu */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5">
-
               {/* Generate navigation links */}
               {nav__links.map((item, index) => (
                 <NavLink
