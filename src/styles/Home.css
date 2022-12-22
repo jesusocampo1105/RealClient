@@ -40,3 +40,7 @@
     font-size: 1.6rem;
   }
 }
+
+.products {
+  display: flex;
+}
