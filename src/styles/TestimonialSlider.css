@@ -1,0 +1,24 @@
+.testimonial__text {
+    text-align: justify;
+    max-width: 90%;
+    font-size: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .slider__content img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10px;
+    border: 1px solid #E9E9E9;
+    padding: .5rem;
+    object-fit: cover;
+  }
+
+  .slider__content h6 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .imagen__testimonial {
+    margin-top: 5rem;
+  }

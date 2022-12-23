@@ -5,10 +5,14 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../styles/Home.css";
 
+// Import images
+import Img2 from '../assets/img/Img-2.jpg'
+
 // Import components
 import Helmet from "../components/Helmet/Helmet";
 import Category from "../components/UI/Category/Category";
 import Filter from "../components/UI/Filter/Filter";
+import TestimonialSlider from '../components/UI/Slider/TestimonialSlider'
 
 // Data
 const featureData = [
@@ -49,7 +53,7 @@ const Home = () => {
             <Col lg="12" className="text-center">
               <h2 className="title mt-4">¿Qué te ofrecemos?</h2>
 
-              <p className="feature__text">
+              <p className="feature__text text-center">
                 A continuación te presentamos los beneficios de comprar en
                 nuestra tienda.
               </p>
@@ -107,6 +111,26 @@ const Home = () => {
                 profesionalismo, además de contar con una atención personalizada
                 respecto a los productos que comercializamos.
               </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Testimonial */}
+      <section>
+        <Container>
+          <Row className="d-flex align-items-center">
+            <Col lg='6' md='6' className="text-center">
+              <div>
+                <h2 className="title mt-3">Testimonios</h2>
+
+                <TestimonialSlider/>
+              </div>
+
+            </Col>
+             
+            <Col lg='6' md='6'>
+              <img src={Img2} alt="Imagen testimonial" className="imagen__testimonial w-100 mb-4"/>
             </Col>
           </Row>
         </Container>
