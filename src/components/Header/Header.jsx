@@ -1,7 +1,7 @@
 // Import dependencies
 import React, { useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 // Import Styles
 import { Container } from "reactstrap";
@@ -9,6 +9,9 @@ import "../../styles/Header.css";
 
 // Import images
 import Logo from "../../assets/img/Logo.svg";
+
+// Import components
+import { cartUIActions } from "../../store/shopping-cart/cartUISlice";
 
 // Navigation Links
 const nav__links = [
@@ -36,8 +39,16 @@ const Header = () => {
   // Selector for cart badge
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
+  // Dispatch to cart sidebar
+  const dispatch = useDispatch();
+
   // Show or hide side menu
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
+
+  // Show or hide side cart
+  const toggleCart = () => {
+    dispatch(cartUIActions.toggle());
+  };
 
   useEffect(() => {
     // Sticky header when scrolling
@@ -83,7 +94,7 @@ const Header = () => {
 
           {/* Nav right icons */}
           <div className="nav__right d-flex align-items-center gap-5">
-            <span className="cart__icon">
+            <span className="cart__icon" onClick={toggleCart}>
               <i className="ri-shopping-cart-2-fill"></i>
 
               <span className="cart__badge">{totalQuantity}</span>
