@@ -1,5 +1,5 @@
 // Import dependencies
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 // Import Styles
@@ -29,11 +29,28 @@ const Header = () => {
   // Menu reference
   const menuRef = useRef(null);
 
+  // Header reference
+  const headerRef = useRef(null)
+
   // Show or hide side menu
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
 
+  useEffect(() => {
+    // Sticky header when scrolling 
+    window.addEventListener('scroll', () => {
+      if( document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 ) {
+        headerRef.current.classList.add('header__shrink')
+      } else {
+        headerRef.current.classList.remove('header__shrink')
+      }
+    })
+
+    return () => window.removeEventListener('scroll')
+  }, [])
+  
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <Container>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
           <div className="logo">
