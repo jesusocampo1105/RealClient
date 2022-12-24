@@ -1,6 +1,7 @@
 // Import dependencies
 import React, { useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // Import Styles
 import { Container } from "reactstrap";
@@ -30,24 +31,29 @@ const Header = () => {
   const menuRef = useRef(null);
 
   // Header reference
-  const headerRef = useRef(null)
+  const headerRef = useRef(null);
+
+  // Selector for cart badge
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   // Show or hide side menu
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
 
   useEffect(() => {
-    // Sticky header when scrolling 
-    window.addEventListener('scroll', () => {
-      if( document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 ) {
-        headerRef.current.classList.add('header__shrink')
+    // Sticky header when scrolling
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("header__shrink");
       } else {
-        headerRef.current.classList.remove('header__shrink')
+        headerRef.current.classList.remove("header__shrink");
       }
-    })
+    });
 
-    return () => window.removeEventListener('scroll')
-  }, [])
-  
+    return () => window.removeEventListener("scroll");
+  }, []);
 
   return (
     <header className="header" ref={headerRef}>
@@ -80,7 +86,7 @@ const Header = () => {
             <span className="cart__icon">
               <i className="ri-shopping-cart-2-fill"></i>
 
-              <span className="cart__badge">2</span>
+              <span className="cart__badge">{totalQuantity}</span>
             </span>
 
             <span className="mobile__menu" onClick={toggleMenu}>

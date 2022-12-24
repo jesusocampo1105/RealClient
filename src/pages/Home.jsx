@@ -6,13 +6,13 @@ import { Container, Row, Col } from "reactstrap";
 import "../styles/Home.css";
 
 // Import images
-import Img2 from '../assets/img/Img-2.jpg'
+import Img2 from "../assets/img/Img-2.jpg";
 
 // Import components
 import Helmet from "../components/Helmet/Helmet";
 import Category from "../components/UI/Category/Category";
 import Filter from "../components/UI/Filter/Filter";
-import TestimonialSlider from '../components/UI/Slider/TestimonialSlider'
+import TestimonialSlider from "../components/UI/Slider/TestimonialSlider";
 
 // Data
 const featureData = [
@@ -120,17 +120,20 @@ const Home = () => {
       <section>
         <Container>
           <Row className="d-flex align-items-center">
-            <Col lg='6' md='6' className="text-center">
+            <Col lg="6" md="6" className="text-center">
               <div>
                 <h2 className="title mt-3">Testimonios</h2>
 
-                <TestimonialSlider/>
+                <TestimonialSlider />
               </div>
-
             </Col>
-             
-            <Col lg='6' md='6'>
-              <img src={Img2} alt="Imagen testimonial" className="imagen__testimonial w-100 mb-4"/>
+
+            <Col lg="6" md="6">
+              <img
+                src={Img2}
+                alt="Imagen testimonial"
+                className="imagen__testimonial w-100 mb-4"
+              />
             </Col>
           </Row>
         </Container>
