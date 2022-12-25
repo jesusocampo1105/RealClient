@@ -32,29 +32,32 @@ const TestimonialSlider = () => {
         </p>
 
         <div className="slider__content d-flex align-items-center gap-3">
-          <img src={Perfil} alt="Perfil"/>
+          <img src={Perfil} alt="Perfil" />
           <h6>Arturo Salazar</h6>
         </div>
       </div>
 
       <div>
         <p className="testimonial__text">
-          "Amo sus productos, me han llevado a experimentar nuevas cosas con mi pareja, el taboo ya no es una opción."
+          "Amo sus productos, me han llevado a experimentar nuevas cosas con mi
+          pareja, el taboo ya no es una opción."
         </p>
 
         <div className="slider__content d-flex align-items-center gap-3">
-          <img src={Perfil} alt="Perfil"/>
+          <img src={Perfil} alt="Perfil" />
           <h6>Daniela Torres</h6>
         </div>
       </div>
 
       <div>
         <p className="testimonial__text">
-          "Es muy emocionante poder adquirir productos para cumplir fantasías, y lo mejor es poder adquirirlos en un lugar donde te brindan toda la asesoría y la discreción que uno quiere. ¡Súper recomendados!"
+          "Es muy emocionante poder adquirir productos para cumplir fantasías, y
+          lo mejor es poder adquirirlos en un lugar donde te brindan toda la
+          asesoría y la discreción que uno quiere. ¡Súper recomendados!"
         </p>
 
         <div className="slider__content d-flex align-items-center gap-3">
-          <img src={Perfil} alt="Perfil"/>
+          <img src={Perfil} alt="Perfil" />
           <h6>Alex Pinto</h6>
         </div>
       </div>
