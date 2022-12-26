@@ -33,7 +33,7 @@ const AllProducts = () => {
   // Pagination
   const [pageNumber, setPageNumber] = useState(0);
 
-  const productPerPage = 6;
+  const productPerPage = 8;
   const visitedPage = pageNumber * productPerPage;
   const displayPage = searchedProduct.slice(
     visitedPage,
