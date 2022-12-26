@@ -69,3 +69,10 @@ td {
     font-size: 1.6rem;
   }
 }
+
+@media (min-width: 992px) {
+  .cart__img-box,
+  .cart__price-box {
+    width: 10rem;
+  }
+}
