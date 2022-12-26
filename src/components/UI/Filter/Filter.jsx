@@ -1,5 +1,6 @@
 // Import dependencies
 import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 
 // Import data products
 import Products from "../../../assets/data/products";
@@ -7,6 +8,7 @@ import Products from "../../../assets/data/products";
 // Import Styles
 import { Col } from "reactstrap";
 import "../../../styles/Filter.css";
+import "../../../styles/Pagination.css";
 
 // Import components
 import ProductCard from "../ProductCard/ProductCard";
@@ -16,6 +18,22 @@ const Filter = () => {
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(Products);
 
+  // Pagination
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const productPerPage = 6;
+  const visitedPage = pageNumber * productPerPage;
+  const displayPage = allProducts.slice(
+    visitedPage,
+    visitedPage + productPerPage
+  );
+  const pageCount = Math.ceil(allProducts.length / productPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
+  // Filter all products
   useEffect(() => {
     if (category === "ALL") {
       // Filter all products best seller
@@ -116,11 +134,21 @@ const Filter = () => {
       </Col>
 
       {/* Cards with products bestseller */}
-      {allProducts.map((item) => (
+      {displayPage.map((item) => (
         <Col lg="3" md="4" xs="6" key={item.id} className="mt-5 d-flex">
           <ProductCard item={item} />
         </Col>
       ))}
+
+      <div>
+        <ReactPaginate
+          pageCount={pageCount}
+          onPageChange={changePage}
+          previousLabel={"Anterior"}
+          nextLabel={"Siguiente"}
+          containerClassName="paginationBttns"
+        />
+      </div>
     </>
   );
 };

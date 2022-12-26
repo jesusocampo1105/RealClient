@@ -1,5 +1,7 @@
+/* eslint-disable array-callback-return */
 // Import dependencies
 import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 
 // Import data products
 import Products from "../assets/data/products";
@@ -8,6 +10,7 @@ import Products from "../assets/data/products";
 import { Container, Row, Col } from "reactstrap";
 import "../styles/AllProducts.css";
 import "../styles/Filter.css";
+import "../styles/Pagination.css";
 
 // Import Components
 import Helmet from "../components/Helmet/Helmet";
@@ -18,9 +21,32 @@ const AllProducts = () => {
   const [search, setSearch] = useState("");
   const [allProducts, setAllProducts] = useState(Products);
 
+  const searchedProduct = allProducts.filter((item) => {
+    if (search.value === "") return item;
+
+    if (item.title.toLowerCase().includes(search.toLowerCase())) return item;
+  });
+
   // Filter all products
   const [category, setCategory] = useState("ALL");
 
+  // Pagination
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const productPerPage = 6;
+  const visitedPage = pageNumber * productPerPage;
+  const displayPage = searchedProduct.slice(
+    visitedPage,
+    visitedPage + productPerPage
+  );
+
+  const pageCount = Math.ceil(searchedProduct.length / productPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
+  // Filter all products
   useEffect(() => {
     if (category === "ALL") {
       // Filter all products
@@ -91,70 +117,78 @@ const AllProducts = () => {
       </section>
 
       {/* Filter */}
-      <Col lg="12">
-        <div className="filter__category d-flex align-items-center justify-content-center">
-          <button
-            className={`all__btn ${
-              category === "ALL" ? "filterBtnActive" : ""
-            }`}
-            onClick={() => setCategory("ALL")}
-          >
-            Todo
-          </button>
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <div className="filter__category d-flex align-items-center justify-content-center">
+                <button
+                  className={`all__btn ${
+                    category === "ALL" ? "filterBtnActive" : ""
+                  }`}
+                  onClick={() => setCategory("ALL")}
+                >
+                  Todo
+                </button>
 
-          <button
-            className={`d-flex align-items-center gap-2 ${
-              category === "TOYS" ? "filterBtnActive" : ""
-            }`}
-            onClick={() => setCategory("TOYS")}
-          >
-            Juguetes
-          </button>
+                <button
+                  className={`d-flex align-items-center gap-2 ${
+                    category === "TOYS" ? "filterBtnActive" : ""
+                  }`}
+                  onClick={() => setCategory("TOYS")}
+                >
+                  Juguetes
+                </button>
 
-          <button
-            className={`d-flex align-items-center gap-2 ${
-              category === "BDSM" ? "filterBtnActive" : ""
-            }`}
-            onClick={() => setCategory("BDSM")}
-          >
-            BDSM
-          </button>
+                <button
+                  className={`d-flex align-items-center gap-2 ${
+                    category === "BDSM" ? "filterBtnActive" : ""
+                  }`}
+                  onClick={() => setCategory("BDSM")}
+                >
+                  BDSM
+                </button>
 
-          <button
-            className={`d-flex align-items-center gap-2 ${
-              category === "LINGERIE" ? "filterBtnActive" : ""
-            }`}
-            onClick={() => setCategory("LINGERIE")}
-          >
-            Lingerie
-          </button>
+                <button
+                  className={`d-flex align-items-center gap-2 ${
+                    category === "LINGERIE" ? "filterBtnActive" : ""
+                  }`}
+                  onClick={() => setCategory("LINGERIE")}
+                >
+                  Lingerie
+                </button>
 
-          <button
-            className={`d-flex align-items-center gap-2 ${
-              category === "COUPLES" ? "filterBtnActive" : ""
-            }`}
-            onClick={() => setCategory("COUPLES")}
-          >
-            Parejas
-          </button>
-        </div>
-      </Col>
+                <button
+                  className={`d-flex align-items-center gap-2 ${
+                    category === "COUPLES" ? "filterBtnActive" : ""
+                  }`}
+                  onClick={() => setCategory("COUPLES")}
+                >
+                  Parejas
+                </button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
       {/* All Products */}
       <Container>
         <Row>
-          {allProducts
-            ?.filter((item) => {
-              if (search.value === "") return item;
-
-              if (item.title.toLowerCase().includes(search.toLowerCase()))
-                return item;
-            })
-            .map((item) => (
-              <Col lg="3" md="4" xs="6" key={item.id} className="mt-5 d-flex">
-                <ProductCard item={item} />
-              </Col>
-            ))}
+          {displayPage.map((item) => (
+            <Col lg="3" md="4" xs="6" key={item.id} className="mt-5 d-flex">
+              <ProductCard item={item} />
+            </Col>
+          ))}
+          <div>
+            <ReactPaginate
+              pageCount={pageCount}
+              onPageChange={changePage}
+              previousLabel={"Anterior"}
+              nextLabel={"Siguiente"}
+              containerClassName="paginationBttns"
+            />
+          </div>
         </Row>
       </Container>
     </Helmet>
