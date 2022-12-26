@@ -1,6 +1,6 @@
 // Import dependencies
 import React, { useRef, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 // Import Styles

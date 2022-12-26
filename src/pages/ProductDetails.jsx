@@ -14,6 +14,7 @@ import '../styles/ProductDetails.css'
 import Helmet from "../components/Helmet/Helmet";
 import ProductCard from '../components/UI/ProductCard/ProductCard'
 import {cartActions} from '../store/shopping-cart/cartSlice'
+import {priceFormat} from '../App'
 
 const ProductDetails = () => {
   const {id} = useParams()
@@ -75,7 +76,7 @@ const ProductDetails = () => {
               <div className="single__product-content">
                 <h2 className='product__title mb-3'>{product.title}</h2>
 
-                <p className='product__price-detail'>Precio: <span>$ {product.price}</span></p>
+                <p className='product__price-detail'>Precio: <span>$ {priceFormat.format(product.price)}</span></p>
 
                 <p className='product__category'>Categoría: <span>{product.category}</span></p>
                 

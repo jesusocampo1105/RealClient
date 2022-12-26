@@ -2,6 +2,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
+import ReactWhatsapp from 'react-whatsapp'
 
 // Import Styles
 import {Container, Col, Row, Table} from 'reactstrap'
@@ -10,11 +11,14 @@ import '../styles/Cart.css'
 // Import Components
 import Helmet from '../components/Helmet/Helmet'
 import TableRow from '../components/UI/Table/TableRow'
+import { priceFormat } from '../App'
 
 const Cart = () => {
   const cartItems = useSelector(state => state.cart.cartItems)
 
   const totalAmount = useSelector(state => state.cart.totalAmount)
+
+  
   return (
     <Helmet title='Carrito'>
       {/* Hero */}
@@ -51,12 +55,14 @@ const Cart = () => {
             )}
 
             <div className='cart__content'>
-              <h3 className='cart__subtotal'>Subtotal: <span>$ {totalAmount}</span></h3>
+              <h3 className='cart__subtotal'>Subtotal: <span>$ {priceFormat.format(totalAmount)}</span></h3>
 
               <p className='cart__desc'>Los precios ya incluyen IVA. El costo de envío se indicará al finalizar la compra.</p>
 
               <div className='cart__btns d-flex gap-5'>
-                <button className='cart__btn'>WhatsApp</button>
+                <ReactWhatsapp number='57-320-251-0584' message={`Buen día, me gustaría adquirir los siguientes productos: ${cartItems.map(item => item.quantity + ' ' + item.title + ' $ ' + item.totalPrice)} para un Total de $ ${totalAmount}`} className='cart__btn'>
+                  WhatsApp
+                </ReactWhatsapp>
                 <button className='cart__btn'><Link to='/products'>Continuar Comprando</Link></button>
               </div>
             </div>

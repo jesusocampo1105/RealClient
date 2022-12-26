@@ -8,6 +8,7 @@ import "../../../styles/CartItem.css";
 
 // Import components
 import { cartActions } from "../../../store/shopping-cart/cartSlice";
+import {priceFormat} from '../../../App'
 
 const CartItem = ({ item }) => {
   // Product props added to cart
@@ -48,7 +49,7 @@ const CartItem = ({ item }) => {
               <h6 className="cart__product-title">{title}</h6>
 
               <p className="d-flex align-items-center gap-5 cart__product-price">
-                {quantity} x <span>$ {totalPrice}</span>
+                {quantity} <span>$ {priceFormat.format(totalPrice)}</span>
               </p>
 
               <div className="d-flex align-items-center justify-content-between increase__decrease-btn">

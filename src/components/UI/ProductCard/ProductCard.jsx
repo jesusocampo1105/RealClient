@@ -8,6 +8,7 @@ import "../../../styles/ProductCard.css";
 
 // Import components
 import { cartActions } from "../../../store/shopping-cart/cartSlice";
+import {priceFormat} from '../../../App'
 
 const ProductCard = (props) => {
   // Props with the product information
@@ -39,7 +40,7 @@ const ProductCard = (props) => {
         </h5>
 
         <div className="d-flex align-items-center justify-content-between flex-column">
-          <span className="product__price">$ {price}</span>
+          <span className="product__price">$ {priceFormat.format(price)}</span>
 
           <button className="addToCart__btn" onClick={addToCart}>
             Agregar al Carrito
