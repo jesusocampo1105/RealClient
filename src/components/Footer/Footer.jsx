@@ -69,6 +69,7 @@ const Footer = () => {
         <Container>
           <Row>
             <p>Copyright 2022.</p>
+
             <p>Todos los derechos reservados.</p>
 
             <div className="logo logo-wirkisoft">
@@ -88,4 +89,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

@@ -8,7 +8,7 @@ import "../../../styles/ProductCard.css";
 
 // Import components
 import { cartActions } from "../../../store/shopping-cart/cartSlice";
-import {priceFormat} from '../../../App'
+import { priceFormat } from "../../../App";
 
 const ProductCard = (props) => {
   // Props with the product information

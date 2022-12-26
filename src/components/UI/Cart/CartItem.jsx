@@ -8,15 +8,16 @@ import "../../../styles/CartItem.css";
 
 // Import components
 import { cartActions } from "../../../store/shopping-cart/cartSlice";
-import {priceFormat} from '../../../App'
+import { priceFormat } from "../../../App";
 
 const CartItem = ({ item }) => {
   // Product props added to cart
   const { id, title, price, image01, quantity, totalPrice } = item;
 
-  // Add products to cart
+  // Dispatch for added products
   const dispatch = useDispatch();
 
+  // Add products to cart
   const incrementItem = () => {
     dispatch(
       cartActions.addItem({

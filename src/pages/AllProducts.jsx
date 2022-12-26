@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 // Import dependencies
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
@@ -21,6 +20,7 @@ const AllProducts = () => {
   const [search, setSearch] = useState("");
   const [allProducts, setAllProducts] = useState(Products);
 
+  // Filter searched products
   const searchedProduct = allProducts.filter((item) => {
     if (search.value === "") return item;
 
@@ -33,15 +33,21 @@ const AllProducts = () => {
   // Pagination
   const [pageNumber, setPageNumber] = useState(0);
 
+  // Products per page
   const productPerPage = 8;
+
   const visitedPage = pageNumber * productPerPage;
+
+  // Displayed page
   const displayPage = searchedProduct.slice(
     visitedPage,
     visitedPage + productPerPage
   );
 
+  // Number of pages to generate
   const pageCount = Math.ceil(searchedProduct.length / productPerPage);
 
+  // Switch to selected page
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
@@ -54,6 +60,7 @@ const AllProducts = () => {
     }
 
     if (category === "BDSM") {
+      // Filter products by category
       const filteredProducts = Products.filter(
         (item) => item.category === "BDSM"
       );
@@ -62,6 +69,7 @@ const AllProducts = () => {
     }
 
     if (category === "TOYS") {
+      // Filter products by category
       const filteredProducts = Products.filter(
         (item) => item.category === "Juguetes"
       );
@@ -70,6 +78,7 @@ const AllProducts = () => {
     }
 
     if (category === "LINGERIE") {
+      // Filter products by category
       const filteredProducts = Products.filter(
         (item) => item.category === "Lencería"
       );
@@ -78,6 +87,7 @@ const AllProducts = () => {
     }
 
     if (category === "COUPLES") {
+      // Filter products by category
       const filteredProducts = Products.filter(
         (item) => item.category === "Parejas"
       );
@@ -107,6 +117,7 @@ const AllProducts = () => {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
+
                 <span>
                   <i className="ri-search-line"></i>
                 </span>
@@ -175,12 +186,15 @@ const AllProducts = () => {
       {/* All Products */}
       <Container>
         <Row>
+          {/* Show all products */}
           {displayPage.map((item) => (
             <Col lg="3" md="4" xs="6" key={item.id} className="mt-5 d-flex">
               <ProductCard item={item} />
             </Col>
           ))}
+
           <div>
+            {/* Pagination */}
             <ReactPaginate
               pageCount={pageCount}
               onPageChange={changePage}

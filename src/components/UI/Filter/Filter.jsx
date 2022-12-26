@@ -14,21 +14,30 @@ import "../../../styles/Pagination.css";
 import ProductCard from "../ProductCard/ProductCard";
 
 const Filter = () => {
-  // Application states
+  // State for categories
   const [category, setCategory] = useState("ALL");
+
+  // State for bestseller products
   const [allProducts, setAllProducts] = useState(Products);
 
   // Pagination
   const [pageNumber, setPageNumber] = useState(0);
 
-  const productPerPage = 6;
+  // Products per page
+  const productPerPage = 8;
+
   const visitedPage = pageNumber * productPerPage;
+
+  // Displayed page
   const displayPage = allProducts.slice(
     visitedPage,
     visitedPage + productPerPage
   );
+
+  // Number of pages to generate
   const pageCount = Math.ceil(allProducts.length / productPerPage);
 
+  // Switch to selected page
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
@@ -140,6 +149,7 @@ const Filter = () => {
         </Col>
       ))}
 
+      {/* Pagination */}
       <div>
         <ReactPaginate
           pageCount={pageCount}

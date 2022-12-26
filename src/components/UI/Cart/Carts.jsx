@@ -1,7 +1,7 @@
 // Import dependencies
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ReactWhatsapp from 'react-whatsapp'
+import ReactWhatsapp from "react-whatsapp";
 
 // Import styles
 import { ListGroup } from "reactstrap";
@@ -10,7 +10,7 @@ import "../../../styles/Carts.css";
 // Import components
 import CartItem from "./CartItem";
 import { cartUIActions } from "../../../store/shopping-cart/cartUISlice";
-import {priceFormat} from '../../../App'
+import { priceFormat } from "../../../App";
 
 const Carts = () => {
   // Hide side cart
@@ -20,6 +20,7 @@ const Carts = () => {
     dispatch(cartUIActions.toggle());
   };
 
+  // Select products from cart
   const cartProducts = useSelector((state) => state.cart.cartItems);
 
   // Update cart products subtotal
@@ -35,6 +36,7 @@ const Carts = () => {
         </div>
 
         <div className="cart__item-list">
+          {/* Load cart products */}
           {cartProducts.length === 0 ? (
             <h6 className="text-center mt-5">El carrito está vacío</h6>
           ) : (
@@ -49,10 +51,21 @@ const Carts = () => {
             Subtotal: <span>$ {priceFormat.format(totalAmount)}</span>
           </h6>
 
-          <ReactWhatsapp number='57-320-251-0584' message={`Buen día, me gustaría adquirir los siguientes productos: ${cartProducts.map(item => item.quantity + ' ' + item.title + ' $ ' + priceFormat.format(item.totalPrice))} para un Total de $ ${priceFormat.format(totalAmount)}`} className='cart__btn'>
+          {/* Send message to whatsapp for purchase */}
+          <ReactWhatsapp
+            number="57-320-251-0584"
+            message={`Buen día, me gustaría adquirir los siguientes productos: ${cartProducts.map(
+              (item) =>
+                item.quantity +
+                " " +
+                item.title +
+                " $ " +
+                priceFormat.format(item.totalPrice)
+            )} para un Total de $ ${priceFormat.format(totalAmount)}`}
+            className="cart__btn"
+          >
             WhatsApp
           </ReactWhatsapp>
-          
         </div>
       </ListGroup>
     </div>

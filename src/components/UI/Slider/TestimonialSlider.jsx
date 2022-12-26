@@ -33,6 +33,7 @@ const TestimonialSlider = () => {
 
         <div className="slider__content d-flex align-items-center gap-3">
           <img src={Perfil} alt="Perfil" />
+
           <h6>Arturo Salazar</h6>
         </div>
       </div>
@@ -45,6 +46,7 @@ const TestimonialSlider = () => {
 
         <div className="slider__content d-flex align-items-center gap-3">
           <img src={Perfil} alt="Perfil" />
+
           <h6>Daniela Torres</h6>
         </div>
       </div>
@@ -58,6 +60,7 @@ const TestimonialSlider = () => {
 
         <div className="slider__content d-flex align-items-center gap-3">
           <img src={Perfil} alt="Perfil" />
+
           <h6>Alex Pinto</h6>
         </div>
       </div>

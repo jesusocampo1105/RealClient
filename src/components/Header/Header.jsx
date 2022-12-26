@@ -50,6 +50,7 @@ const Header = () => {
     dispatch(cartUIActions.toggle());
   };
 
+  // State to sticky header
   useEffect(() => {
     // Sticky header when scrolling
     window.addEventListener("scroll", () => {

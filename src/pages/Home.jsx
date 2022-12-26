@@ -14,7 +14,7 @@ import Category from "../components/UI/Category/Category";
 import Filter from "../components/UI/Filter/Filter";
 import TestimonialSlider from "../components/UI/Slider/TestimonialSlider";
 
-// Data
+// General information
 const featureData = [
   {
     icon: <i className="ri-motorbike-fill"></i>,
