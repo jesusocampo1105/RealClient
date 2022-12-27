@@ -1,0 +1,21 @@
+.card{
+    background-image: url(../atomicDesign/fondo.png);
+    align-items: center;
+    height: 185px;
+    width: 238px;
+    border: 0px;
+}
+.card h2{
+    font-size: 25px;
+}
+.card h4{
+    font-size: 12px;
+}
+.card button{
+    border-radius: 50px;
+    background: black;
+    color: white;
+    width: 73px;
+    height: 24px;
+    font-size: 12px;
+}

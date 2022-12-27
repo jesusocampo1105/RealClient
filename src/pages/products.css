@@ -1,0 +1,113 @@
+
+ .hide-element {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+  }
+  .products{
+    background: #B3B5CF;
+    height: 1889px;
+}
+.sections{
+    height: 47vh;
+    text-align: -webkit-center;
+}
+.btns .btnOne{
+    background: #6D68C8;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.btns .btnTwo{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.sections .btns{
+    display: flex;
+    justify-content: space-evenly;
+    height: 32px;
+    margin-top: 57px;
+}
+.sections .card{
+    height: 182px;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin: 39px;
+}
+@media (min-width: 320px) {
+    
+}
+
+@media (min-width: 640px) {
+    .cards{
+        display: contents;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+
+  
+  /*KeyFrames*/
+  /*La animacion hecha por ti, puedes ponerle cualquier nombre, solo es para identificarlo*/
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /*Puedes hacer mas animaciones personalizadas con todo lo que pueda hacer css*/
+  @keyframes otherAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes animationTranslateIn {
+    from {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes animationTranslateOut {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(-200px);
+    }
+  }
+  

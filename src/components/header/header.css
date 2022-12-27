@@ -1,67 +1,75 @@
-*{
-    overflow: none !important;
+* {
+  overflow: none !important;
 }
 
-.navbar{
-    align-items: center;
-    background: #D9D9D9;
+.navbar {
+  align-items: center;
+  background: #d9d9d9;
 }
-.imageDaniCode{
-    width: 23%;
-    height: 74px;
+.imageDaniCode {
+  width: 23%;
+  height: 74px;
 }
-.navbarText{
-    list-style: none;
-    display: contents;
+.navbarText {
+  list-style: none;
+  display: contents;
 }
-.navOption{
+.navOption {
     display: none;
+  text-decoration: none;
+  color: black;
 }
-.imageShoppingCar{
-    width: 16%;
-    height: 30px;
+.navOption1 {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  list-style: none;
+  margin-right: 1rem;
 }
-ul{
-    cursor: pointer;
-    font-weight: bold;
+.imageShoppingCar {
+  width: 16%;
+  height: 30px;
 }
-.image1{
-    width: 10%;
+ul {
+  cursor: pointer;
+  font-weight: bold;
+}
+.image1 {
+  width: 10%;
 }
 
 @media (min-width: 320px) {
-    
 }
 
 @media (min-width: 640px) {
-    .section1{
-        display: flex;
-    }
-    .imageDaniCode{
-        width: 12%;
-    }
-    .imageShoppingCar{
-        width: 7%;
-    }
-    .navOption{
-        display: block;
-    }
+  .section1 {
+    display: flex;
+  }
+  .imageDaniCode {
+    width: 12%;
+  }
+  .imageShoppingCar {
+    width: 7%;
+  }
+  .navOption {
+    display: block;
+  }
 }
 
 @media (min-width: 1024px) {
-    .imageDaniCode{
-        width: 8%;
-    }
-    .imageShoppingCar{
-        width: 5%;
-    }
+  .imageDaniCode {
+    width: 8%;
+  }
+  .imageShoppingCar {
+    width: 5%;
+  }
 }
 
 @media (min-width: 1280px) {
-    .imageShoppingCar{
-        width: 5%;
-    }
-    .imageDaniCode{
-        width: 8%;
-    }
+  .imageShoppingCar {
+    width: 5%;
+  }
+  .imageDaniCode {
+    width: 8%;
+  }
 }
