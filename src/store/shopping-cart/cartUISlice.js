@@ -1,6 +1,8 @@
-// Import dependencies
+//Library
 import { createSlice } from "@reduxjs/toolkit";
 
+
+//Constant with state in Redux
 const cartUISlice = createSlice({
   name: "cartUI",
   initialState: { cartIsVisible: false },

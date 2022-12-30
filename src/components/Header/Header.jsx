@@ -1,22 +1,31 @@
-// Import dependencies
+//Library
 import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-// Import Styles
+//Style
 import { Container } from "reactstrap";
 import "../../styles/Header.css";
 
-// Import images
-import Logo from "../../assets/img/Logo.svg";
+//Image
+import Logo from "../../assets/img/LogoSinFondo.png";
 
-// Import components
+//Component
 import { cartUIActions } from "../../store/shopping-cart/cartUISlice";
 
-// Navigation Links
+//Array Pages
 const nav__links = [
   {
     display: "Inicio",
+    path: "/home",
+  },
+
+  {
+    display: "Testimonios",
+    path: "/home",
+  },
+  {
+    display: "Contacto",
     path: "/home",
   },
   {
@@ -50,23 +59,7 @@ const Header = () => {
     dispatch(cartUIActions.toggle());
   };
 
-  // State to sticky header
-  useEffect(() => {
-    // Sticky header when scrolling
-    window.addEventListener("scroll", () => {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        headerRef.current.classList.add("header__shrink");
-      } else {
-        headerRef.current.classList.remove("header__shrink");
-      }
-    });
-
-    return () => window.removeEventListener("scroll");
-  }, []);
-
+  
   return (
     <header className="header" ref={headerRef}>
       <Container>
@@ -95,7 +88,7 @@ const Header = () => {
 
           {/* Nav right icons */}
           <div className="nav__right d-flex align-items-center gap-5">
-            <span className="cart__icon" onClick={toggleCart}>
+            <span className="cart__icon">
               <i className="ri-shopping-cart-2-fill"></i>
 
               <span className="cart__badge">{totalQuantity}</span>

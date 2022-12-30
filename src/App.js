@@ -1,4 +1,3 @@
-// Import components
 import Layout from "./components/Layout/Layout";
 
 function App() {
@@ -7,5 +6,4 @@ function App() {
 
 export default App;
 
-// Function to separate values in thousands
 export const priceFormat = Intl.NumberFormat('es-ES')

@@ -1,3 +1,10 @@
+.bg{
+  background: #B3B5CF;
+}
+.allproducts{
+  background: #B3B5CF;
+}
+
 .hero__img-products {
   background-image: url(../assets/img/Slider-3.jpg);
   height: 25rem;

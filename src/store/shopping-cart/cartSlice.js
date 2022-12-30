@@ -1,20 +1,21 @@
-// Import dependencies
+//Library
 import { createSlice } from "@reduxjs/toolkit";
 
-// State for createSlice
+
+// State constant
 const initialState = {
   cartItems: [],
   totalQuantity: 0,
   totalAmount: 0,
 };
 
-// Reducer for createSlice
+// State constant
 const cartSlice = createSlice({
   name: "cart",
   initialState: initialState,
 
   reducers: {
-    // Add Item
+    // Add data
     addItem(state, action) {
       const newItem = action.payload;
       const existingItem = state.cartItems.find(

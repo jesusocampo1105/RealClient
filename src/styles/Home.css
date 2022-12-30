@@ -23,13 +23,13 @@
 }
 
 .feature__text span {
-  color: #a6032f;
+  color: #000000;
   font-weight: 500;
 }
 
 .feature__item-icon {
   font-size: 5rem;
-  color: #a6032f;
+  color: #000000;
 }
 
 .feature__item p {
@@ -40,11 +40,20 @@
   display: flex;
 }
 
+
+@media (min-width: 320px) {
+  .footer-sections {
+    height: 400px;
+}
+}
 @media (min-width: 992px) {
   .hero__img {
     height: 50rem;
     background-position: center;
   }
+  .footer{
+  height: 200px;
+}
 
   .feature__text {
     text-align: justify;

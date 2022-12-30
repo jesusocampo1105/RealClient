@@ -1,7 +1,7 @@
-// Import dependencies
+//Library
 import React from "react";
 
-// Helper to add the title to the pages
+
 const Helmet = (props) => {
   document.title = "Fantasy sex shop - " + props.title;
 

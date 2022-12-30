@@ -1,0 +1,92 @@
+.Products{
+    background: #d9d9d9;
+    padding: 10px;
+    margin: 39px 6px;
+}
+.Products-section1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    height: 80px;
+    text-align: center;
+    justify-content: space-around;
+    width: 132px;
+}
+.card h2{
+    font-size: 10px;
+}
+.card h4{
+    font-size: 9px;
+}
+.card button{
+    width: 61px;
+    height: 20px;
+    font-size: 9px;
+}
+.Products-section2{
+    align-self: center;
+    font-weight: bold;
+    font-size: 11px;
+}
+.Products-section3{
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+}
+.Products-section3 article{
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.Products-button{
+    text-align: right;
+    padding: 38px;
+}
+.Products-button button{
+    color: white;
+    background: black;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+@media (min-width: 320px) {
+    
+}
+
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 1024px) {
+    .Products{
+        margin: 40px 40px;
+    }
+    .Products-section1 .card{
+        height: 80px;
+    }
+    .card h2{
+        font-size: 12px;
+    }
+    .card h4{
+        font-size: 11px;
+    }
+    .card button{
+        width: 70px;
+        height: 20px;
+        font-size: 11px;
+    }
+    .Products-section2 {
+        font-size: 13px;
+    }
+    .Products-section3 article{
+        margin-right: 9px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .Products{
+        margin: 50px 50px;
+    }
+}

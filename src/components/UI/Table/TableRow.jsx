@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 
 // Import Styles
 import "../../../styles/Cart.css";
+import '../../../styles/tablerow.css'
 
 // Import Components
 import { cartActions } from "../../../store/shopping-cart/cartSlice";
@@ -22,22 +23,14 @@ const TableRow = (props) => {
   };
 
   return (
-    <tr>
-      <td className="text-center cart__img-box">
-        <img src={image01} alt="imagen producto" />
-      </td>
-
-      <td className="text-center">{title}</td>
-
-      <td className="text-center cart__price-box">
-        $ {priceFormat.format(price)}
-      </td>
-
-      <td className="text-center ">{quantity}</td>
+    <tr className="products">
+      <td className="name">{title}</td>
 
       <td className="text-center cart__price-box">
         $ {priceFormat.format(totalPrice)}
       </td>
+
+      <td className="text-center ">unidades: {quantity}</td>
 
       <td className="text-center cart__icon-box">
         <i className="ri-delete-bin-fill" onClick={deleteItem}></i>

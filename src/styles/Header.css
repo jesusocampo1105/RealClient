@@ -2,6 +2,7 @@
   width: 100%;
   height: 8rem;
   line-height: 8rem;
+  background: #D9D9D9;
 }
 
 .logo img {
@@ -13,23 +14,20 @@
 .menu a {
   font-weight: 700;
   font-size: 1.6rem;
-  color: #f291bf;
   transition: 0.3s;
   text-transform: capitalize;
 }
 
 .menu a:hover {
-  color: #a6032f;
+  color: #6D68C8;
 }
 
-.active__menu {
-  color: #a6032f !important;
-}
+
 
 .cart__icon i,
 .mobile__menu i {
   font-size: 1.8rem;
-  color: #f291bf;
+
   cursor: pointer;
 }
 
@@ -44,8 +42,8 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  border: 1px solid #f291bf;
-  background-color: #f291bf;
+
+  background-color: #6D68C8;
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
@@ -88,22 +86,6 @@
   display: block;
 }
 
-.header__shrink {
-  position: sticky;
-  top: 0;
-  left: 0;
-  box-shadow: 5px 5px 15px -5px #fde4e4;
-  background: #ffffff;
-  z-index: 100;
-  padding: 1rem 0;
-  height: 11rem;
-}
-
-.header__shrink .logo,
-.header__shrink .navigation,
-.header__shrink .nav__right {
-  margin-top: 2rem;
-}
 
 @media (min-width: 992px) {
   .navigation {

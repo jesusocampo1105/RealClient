@@ -1,0 +1,81 @@
+.section1-text{
+    text-align: -webkit-center;
+    align-self: center;
+}
+.section1-text h3{
+    font-size: 13px;
+    color: #5B5B60;
+    margin-bottom: 5%;
+}
+.section1-text h1{
+    font-size: 25px;
+    margin-top: 39px;
+    color: black;
+}
+.section1-button{
+    background: #6D68C8;
+    border: 0;
+    border-radius: 20px;
+    width: 101px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.image1{
+    width: 280px;
+    margin-top: 22px;
+}
+.section1-image{
+    text-align: center;
+}
+
+@media (min-width: 320px) {
+    
+}
+
+@media (min-width: 640px) {
+    .section1{
+    justify-content: center;
+    }
+    .section1-text{
+        padding: 30px;
+    }
+    .section1-text h1{
+        font-size: 33px;
+    }
+    .section1-image{
+    align-self: flex-end;
+    }
+    .section1-button{
+    height: 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section1{
+        justify-content: space-evenly;
+    }
+    .image1{
+    width: 344px;
+    }
+    .section1-text{
+        padding: 0px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .section1-text h1{
+        font-size: 49px;
+    }
+    .section1-text h3 {
+        font-size: 16px;
+    }
+    .section1-button{
+        width: 150px;
+        height: 39px;
+        font-size: 18px;
+    }
+    .image1{
+    width: 463px;
+    }
+}

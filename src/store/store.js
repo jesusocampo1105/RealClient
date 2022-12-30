@@ -1,10 +1,11 @@
-// Import dependencies
+// Library
 import { configureStore } from "@reduxjs/toolkit";
 
-// Import components
+//Component
 import cartSlice from "./shopping-cart/cartSlice";
 import cartUISlice from "./shopping-cart/cartUISlice";
 
+//Constant with state in Redux
 const store = configureStore({
   reducer: {
     cart: cartSlice.reducer,

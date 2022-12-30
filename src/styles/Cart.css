@@ -41,7 +41,7 @@ td {
 }
 
 .cart__subtotal span {
-  color: #a6032f;
+  color: #e37b97;
   font-weight: 700;
 }
 
@@ -57,10 +57,18 @@ td {
 .cart__btn {
   border: none;
   padding: 0.7rem 2.5rem;
-  background: #a6032f;
+  background: #000000;
   color: #ffffff;
-  border-radius: 7px;
+  border-radius: 50px;
   font-size: 1.4rem;
+  font-weight: bold;
+}
+.btncart{
+  place-content: end;
+}
+.table{
+text-align: -webkit-center;
+margin-top: 50px;
 }
 
 @media (min-width: 768px) {

@@ -22,12 +22,6 @@ const Cart = () => {
 
   return (
     <Helmet title="Carrito">
-      {/* Hero */}
-      <section>
-        <div className="hero__img-cart d-flex align-items-center">
-          <h1 className="hero__title">Detalle de la compra</h1>
-        </div>
-      </section>
 
       {/* Table */}
       <Container>
@@ -35,60 +29,36 @@ const Cart = () => {
           <Col lg="12">
             {/* Show cart products in table */}
             {cartItems.length === 0 ? (
-              <h3 className="text-center mt-5 mb-5">El carrito está vacío</h3>
+              <h3 className="text-center mt-5 mb-5">Aun no tienes productos por comprar</h3>
             ) : (
-              <Table
-                bordered
-                responsive
-                hover
-                className="table mt-5 text-center"
-              >
-                <thead>
-                  <tr>
-                    <th>Imagen</th>
-                    <th>Nombre del Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
-                    <th>Opciones</th>
-                  </tr>
-                </thead>
 
-                <tbody>
-                  {/* Generate table rows */}
+              <article className="table">
+                  {/* Add products */}
                   {cartItems.map((item) => (
                     <TableRow item={item} key={item.id} />
                   ))}
-                </tbody>
-              </Table>
+              </article>
+
             )}
 
             <div className="cart__content">
-              <h3 className="cart__subtotal">
-                Subtotal: <span>$ {priceFormat.format(totalAmount)}</span>
-              </h3>
 
-              <p className="cart__desc">
-                Los precios ya incluyen IVA. El costo de envío se indicará al
-                finalizar la compra.
-              </p>
+              <div className="btncart cart__btns d-flex gap-5">
 
-              <div className="cart__btns d-flex gap-5">
-                {/* Send message to whatsapp for purchase */}
+
+                {/* Library Whatsapp Message */}
                 <ReactWhatsapp
-                  number="57-320-251-0584"
-                  message={`Buen día, me gustaría adquirir los siguientes productos: ${cartItems.map(
+                  number="57-323-201-4153"
+                  message={`Buen día, deseo adquirir un producto que se encuentra en la pagina web: ${cartItems.map(
                     (item) =>
                       item.quantity + " " + item.title + " $ " + item.totalPrice
-                  )} para un Total de $ ${totalAmount}`}
+                  )} Que tiene el valor de 🧑‍💻 $ ${totalAmount}`}
                   className="cart__btn"
                 >
-                  WhatsApp
+                  Total aproximado = ${priceFormat.format(totalAmount)}
                 </ReactWhatsapp>
 
-                <button className="cart__btn">
-                  <Link to="/products">Continuar Comprando</Link>
-                </button>
+
               </div>
             </div>
           </Col>

@@ -1,0 +1,87 @@
+* {
+  overflow: none !important;
+}
+
+.navbar {
+  align-items: center;
+  background: #d9d9d9;
+}
+.imageDaniCode {
+  width: 84px;
+  height: 74px;
+}
+.navbarText {
+  list-style: none;
+  display: contents;
+}
+a{
+  color: #d9d9d9 !important;
+  text-decoration: none;
+}
+.navOption {
+  display: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  list-style: none;
+  margin-right: 1rem;
+  border: 0;
+  background: none;
+}
+.navOption1 {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  list-style: none;
+  margin-right: 1rem;
+  border: 0;
+  background: none;
+}
+
+.imageShoppingCar {
+  width: 60px;
+  height: 30px;
+}
+ul {
+  cursor: pointer;
+  font-weight: bold;
+}
+.image1 {
+  width: 10%;
+}
+
+@media (min-width: 320px) {
+}
+
+@media (min-width: 640px) {
+  .section1 {
+    display: flex;
+  }
+  .imageDaniCode {
+    width: 12%;
+  }
+  .navOption {
+    display: block;
+  }
+  .navOption2 {
+    display: block;
+  }
+  .section1 button {
+    font-size: 13px;
+}
+}
+
+@media (min-width: 1024px) {
+  .imageDaniCode {
+    width: 8%;
+  }
+  .section1 button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .imageDaniCode {
+    width: 8%;
+  }
+}

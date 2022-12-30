@@ -29,10 +29,7 @@ const ProductCard = (props) => {
   };
 
   return (
-    <div className="product__item d-flex flex-column">
-      <div className="product__img">
-        <img src={image01} alt="Imagen producto" className="w-50" />
-      </div>
+    <div className="product product__item d-flex flex-column">
 
       <div className="product__content d-flex flex-column">
         <h5>
@@ -43,7 +40,7 @@ const ProductCard = (props) => {
           <span className="product__price">$ {priceFormat.format(price)}</span>
 
           <button className="addToCart__btn" onClick={addToCart}>
-            Agregar al Carrito
+            Comprar
           </button>
         </div>
       </div>

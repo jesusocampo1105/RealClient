@@ -1,0 +1,15 @@
+.section2{
+    text-align: -webkit-center;
+    margin-top: 21px;
+}
+.section2 h1{
+    background: #D9D9D9;
+    font-size: 25px;
+    padding: 12px;
+    margin-bottom: 33px;
+    color: black;
+}
+.text{
+    color: #5B5B60;
+    font-size: 12px;
+}

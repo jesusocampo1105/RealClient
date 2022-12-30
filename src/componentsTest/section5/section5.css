@@ -1,0 +1,11 @@
+.section5 h1{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 39px;
+    margin-bottom: 40px;
+    color: black;
+}
+.section5-images{
+    display: flex;
+    justify-content: center;
+}
